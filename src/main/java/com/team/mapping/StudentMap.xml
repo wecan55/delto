@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.team.mapping.StudentMap">
+
+<select id="getStudent" resultType="com.team.model.Student">
+select * from student where account=#{account}
+</select>
+
+<insert id="insertStudent" parameterType="com.team.model.Student">
+insert into student(account) value(#{account})
+</insert>
+
+<update id="updateStudent" parameterType="com.team.model.Student">
+update student set introduction=#{introduction} where account=#{account}
+</update>
+
+</mapper>
